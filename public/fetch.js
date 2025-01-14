@@ -18,7 +18,7 @@ async function fetchData(url, method = 'GET', data = null, headers = {}) {
             throw new Error(`HTTP Error: ${response.status}`);
         }
 
-        if (method === 'POST' || method === 'DELETE') return;
+        if (method === 'POST' || method === 'DELETE' || method === 'PUT') return;
 
         const result = await response.json();
         return result;

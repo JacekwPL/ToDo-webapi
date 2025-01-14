@@ -91,7 +91,7 @@ namespace ToDo_webapi.Controllers
             return NotFound();
         }
 
-        [HttpPut("/MarkAsDone{id}")]
+        [HttpPut("/MarkAsDone/{id}")]
         public IActionResult MarkAsDone(int id)
         {
             var result = ToDoTaskServices.MarkAsDone(id);

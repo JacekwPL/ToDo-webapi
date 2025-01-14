@@ -31,7 +31,7 @@ function hoverUpdate() {
 
     liElements.forEach(li => {
         const divElement = li.querySelector('div.icons span.icon.check');
-
+        const id = li.getAttribute("data-id");
         li.addEventListener('mouseenter', () => {
                 divElement.classList.add('highlighted');
         });
@@ -40,9 +40,7 @@ function hoverUpdate() {
             divElement.classList.remove('highlighted');
         });
 
-        li.addEventListener('click', () => {
-            checkTask();
-        });
+        li.addEventListener('click', (ev) => checkTask(ev, id));
     });
 
 }

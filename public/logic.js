@@ -86,7 +86,8 @@ function addTodoElement(id, name, completed) {
 
     const checkSpan = document.createElement('span');
     checkSpan.classList.add('icon', 'check');
-    checkSpan.textContent = '🔘';
+    if (!completed) checkSpan.textContent = '🔘';
+    else checkSpan.textContent = '✅';
 
     const deleteSpan = document.createElement('span');
     deleteSpan.classList.add('icon', 'delete');
@@ -165,15 +166,16 @@ async function deleteTask(ev, id, deletedTask) {
  */
 
 async function checkTask(ev, id) {
-    const url = '';
-    const method = 'POST';
-    const body = id; // Pozmieniać
+    const url = `http://localhost:5017/MarkAsDone/${id}`;
+    const method = 'PUT';
     try {
-        const data = await fetchData(url, method, body);
+        await fetchData(url, method);
 
         // Wyświetlić komunikat o usunięciu
 
-        showOutputMessage('success', 'Zaznaczono id');
+        showOutputMessage('success', 'Potwierdzono ukończenie zadania');
+
+        await showTasks();
     }
     catch (err) {
         console.error(`Błąd podczas zaznaczania aktywności: ${err.message}`);
