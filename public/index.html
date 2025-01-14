@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="main_styles.css">
+    <link rel="stylesheet" href="input_styles.css">
+    <link rel="stylesheet" href="list_styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="todo-container">
+        <div id="todo-section">
+            <div class="new-item-input">
+                <div class="title-item-input">
+                    <label name="new-item">Task</label>
+                </div>
+                <div class="add-item-input">
+                    <input type="text" class="add-item-text">
+                    <input type="button" value="Dodaj" class="add-item-button">
+                </div>
+            </div>
+            <div id="output-message">
+                a
+            </div>
+            <div class="todo-list">
+                <ul id="main-list">
+                    <li>
+                        <div class="todo-element-name">
+                            Element 1
+                        </div>
+                        <div class="icons">
+                            <span class="icon check">
+                                🔘
+                            </span>
+                            <span class="icon delete">🗑️
+                            </span>
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <div class="todo-element-name">
+                            Element 1
+                        </div>
+                        <div class="icons">
+                            <span class="icon check">
+                                🔘
+                            </span>
+                            <span class="icon delete">🗑️
+                            </span>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="fetch.js"></script>
+    <script src="css_update.js"></script>
+    <script src="logic.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+.new-item-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    user-select: none;
+}
+
+.new-item-input input[type="text"] {
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    border-radius: 20px;
+    border: 2px solid;
+    outline: none;
+    font-size: 1rem;
+}
+
+.new-item-input input[type="button"] {
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    border-radius: 16px;
+    border: 2px solid;
+    outline: none;
+}
+
+.new-item-input input[type="button"]:hover {
+    transition: background-color 0.3s;
+    background-color: greenyellow;
+    cursor: pointer;
+}
+
+.new-item-input .title-item-input {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.new-item-input .add-item-input {
+    display: flex;
+    gap: 1rem;
+}
+
+#output-message {
+    align-self: center;
+    color: red;
+    visibility: hidden;
+}
